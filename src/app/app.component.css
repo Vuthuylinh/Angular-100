@@ -1,0 +1,61 @@
+
+
+.button {
+  position: relative;
+  padding: .8em 1.4em;
+  padding-right: 4.7em;
+  background: rgb(92, 153, 51);
+  color: white;
+  transition: .2s;
+}
+.button:before,:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding-top: inherit;
+    padding-bottom: inherit;
+    width: 2.8em;
+    content: "\00a0";
+    font-family: 'FontAwesome', sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+    transition: .2s;
+    transform-origin: 50% 60%;
+  }
+.button:before {
+    background: blue
+  }
+.button:hover {
+    background: darkblue;
+  }
+.button:active,:focus {
+    background: darkgreen;
+    outline: none;
+  }
+
+.button {
+  min-width: 15em;
+}
+
+.arrow {
+  background: #FE5F55;
+}
+.arrow:hover {
+    background: darken(#FE5F55, 10%);
+  }
+.arrow:active,:focus {
+    background: darken(#FE5F55, 30%);
+  }
+.arrow:after {
+    content: ">";
+  }
+.arrow:hover:after {
+    -webkit-animation: bounceright .3s alternate ease infinite;
+    animation: bounceright .3s alternate ease infinite;
+}
+
+@keyframes bounceright {
+  from { transform: translateX(0); }
+  to   { transform: translateX(3px); }
+}
